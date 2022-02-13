@@ -1,7 +1,7 @@
 import React from "react";
 import "./List.css";
 import { Check, X } from "react-feather";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 
 const List = ({ title, deleteData }) => {
   const [isCheck, setIsCheck] = useState(false);

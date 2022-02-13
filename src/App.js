@@ -1,4 +1,4 @@
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 import "./App.css";
 import List from "./components/list/List";
 import Title from "./components/title/Title";

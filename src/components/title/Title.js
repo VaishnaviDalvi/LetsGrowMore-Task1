@@ -1,6 +1,6 @@
 import React from "react";
 import "./Title.css";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 
 const Title = ({ handelsubmit }) => {
   const [val, setVal] = useState("");
