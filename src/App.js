@@ -1,23 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react/cjs/react.development";
+import "./App.css";
+import List from "./components/list/List";
+import Title from "./components/title/Title";
 
 function App() {
+  const [data, setData] = useState([
+    {
+      title: "hit the gym",
+    },
+    {
+      title: "hit the floor",
+    },
+  ]);
+  const handleSubmit = (value) => {
+    setData([
+      ...data,
+      {
+        title: value,
+      },
+    ]);
+  };
+  const deleteData = (del) => {
+    let id = data
+      .map((e) => {
+        return e.title;
+      })
+      .indexOf(del);
+    let tempData = data;
+    tempData.splice(id, 1);
+    setData([...tempData]);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app_wrapper">
+      <div className="app_box">
+        {/* title box */}
+        <Title handelsubmit={handleSubmit} />
+        {/* list */}
+        {data.map((item) => {
+          return <List title={item.title} deleteData={deleteData} />;
+        })}
+      </div>
     </div>
   );
 }

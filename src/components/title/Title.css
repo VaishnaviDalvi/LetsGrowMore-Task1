@@ -1,0 +1,35 @@
+.Title_wrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
+}
+.Title_box {
+  width: 400px;
+  background-color: blueviolet;
+  color: white;
+  padding: 30px;
+  font-size: 30px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.input_box {
+  padding: 5px;
+  height: 40px;
+  margin-top: 10px;
+  border: none;
+  width: 250px;
+  max-height: 40px;
+  font-size: 16px;
+}
+.button_box {
+  padding: 5px;
+  height: 50px;
+  margin-top: 10px;
+  background-color: lightblue;
+  width: 60px;
+  border: none;
+  color: blue;
+  font-weight: bold;
+  max-height: 50px;
+  font-size: 16px;
+}
